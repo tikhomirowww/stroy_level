@@ -9,6 +9,8 @@ import Typography from '@mui/material/Typography';
 // web.cjs is required for IE11 support
 import { useSpring, animated } from 'react-spring/web.cjs';
 import TextField from '@mui/material/TextField';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
 
 
     const Fade = React.forwardRef(function Fade(props, ref) {
@@ -58,7 +60,16 @@ import TextField from '@mui/material/TextField';
         alignItems: 'center'
       };
 
-
+        const theme = createTheme({
+            palette: {
+            primary: {
+                main: '#000000',
+            },
+            secondary: {
+                main: '#d05000',
+            },
+            },
+        });
 
 const HomePage = () => {
     const [open, setOpen] = React.useState(false);
@@ -105,10 +116,12 @@ const HomePage = () => {
             <Typography id="spring-modal-title" variant="h6" component="h2">
               Оформить замер
             </Typography>
+            <ThemeProvider theme={theme}>
             <Typography id="spring-modal-description" sx={{ mt: 2, mb: 2 }}>
             <TextField id="standard-basic" size='small' label="Имя" variant="outlined" />
             </Typography>
             <TextField id="standard-basic" size='small' label="Номер What's App" variant="outlined" />
+            </ThemeProvider>
             <Button variant='contained' className="modal_btn" >Отправить заявку</Button>
           </Box>
           </div>
