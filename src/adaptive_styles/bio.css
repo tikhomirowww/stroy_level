@@ -1,0 +1,89 @@
+@media all and (max-width: 1201px){
+    .left_kamin{
+        height: 370px;
+        font-size: 20px;
+    }
+
+    .low_bio_block{
+        height: 430px;
+    }
+}
+
+@media all and (max-width: 1025px){
+    .low_bio_block{
+        height: 360px;
+    }
+
+    .left_kamin{
+        font-size: 18px;
+    }
+
+    .hover_kamin{
+        width: 105%;
+        height: 190px;
+    }
+
+    .hover_kamin h2{
+        margin-top: 11px;
+    }
+}
+
+@media all and (max-width: 769px){
+    .left_kamin{
+        font-size: 16px;
+    }
+
+    .shower_card img{
+        height: 240px;
+    }
+
+    .low_bio_block{
+        height: 285px;
+    }
+
+    .shower_card{
+        height: 200px;
+    }
+
+    .hover_kamin{
+        width: 100%;
+        height: 139px;
+    }
+
+    .hover_kamin p{
+        font-size: 12px;
+    }
+
+    .hover_kamin h2{
+        font-size: 24px;
+    }
+}
+
+@media all and (max-width: 426px){
+    .main_block_kamin{
+        margin-top: 32%;
+        flex-direction: column;
+        padding-bottom: 5%;
+        height: 670px;
+    }
+
+    .kamin_bg{
+        height: 100%;
+    }
+
+    .left_kamin{
+        width: 70%;
+        height: 300px;
+        /* margin-top: 20%; */
+    }
+
+    .low_bio_block{
+        height: 850px;
+    }
+}
+
+@media all and (max-width: 376px){
+    .left_kamin{
+        font-size: 15px;
+    }
+}

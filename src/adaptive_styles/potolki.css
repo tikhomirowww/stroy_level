@@ -1,0 +1,49 @@
+@media all and (max-width: 1200px){
+    .left_pot{
+        font-size: 26px;
+    }
+}
+
+@media all and (max-width: 1024px){
+    .low_pot_block{
+        height: 465px;
+    }
+}
+
+@media all and (max-width: 768px){
+    .left_pot{
+        font-size: 16px;
+        height: 215px;
+    }
+
+    .low_pot_block{
+        height: 300px;
+    }
+
+    .loft_card{
+        height: 200px;
+    }
+}
+
+@media all and (max-width: 425px){
+    .main_block_pot{
+        flex-direction: column;
+    }
+
+    .left_pot{
+        width: 70%;
+        margin-top: 20%;
+    }
+
+    .pot_bg_low{
+        height: 850px;
+    }
+
+    .left_pot{
+        height: 180px;
+    }
+}
+
+@media all and (max-width: 375px){
+    
+}

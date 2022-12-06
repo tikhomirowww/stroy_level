@@ -1,0 +1,28 @@
+@media all and (max-width: 425px){
+    .social{
+        width: 25px !important;
+    }
+
+    .social_logo{
+        width: 65px;
+    }
+
+    .social_box{
+        align-items: center;
+    }
+}
+
+@media all and (max-width: 375px){
+    .navbar_logo{
+        width: 70px;
+        height: 70px;
+    }
+
+    .o{
+        font-size: 12px;
+    }
+
+    .mega{
+        font-size: 12px;
+    }
+}

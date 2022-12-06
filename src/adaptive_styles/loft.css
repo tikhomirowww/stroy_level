@@ -1,0 +1,231 @@
+@media all and (max-width: 1201px){
+    .left_loft{
+        font-size: 22px;
+        height: 380px;
+    }
+
+    .loft_card{
+        width: 300px;
+    }
+
+    .loft_card img{
+        width: 300px;
+        height: 370px;
+    }
+
+    .hover_div{
+        height: 269px;
+        width: 300px;
+    }
+
+    .low_block{
+        height: 480px;
+    }
+
+    .adv_desc{
+        font-size: 25px;
+    }
+
+    .main_block_loft{
+        margin-top: 10%;
+    }
+}
+
+@media all and (max-width: 1025px){
+    .main_block_loft{
+        margin-top: 12%;
+    }
+
+    .adv_desc{
+        font-size: 20px;
+    }
+
+    .hover_div{
+        width: 100%;
+        height: 269px;
+    }
+
+    .hover_div h2{
+        margin-top: 135px;
+    }
+}
+
+@media all and (max-width: 769px){
+    .left_loft{
+        font-size: 17px;
+        height: 315px;
+    }
+
+    .top_carousel_img{
+        margin: 90px auto;
+        height: 324px;
+    }
+
+    .main_block_loft{
+        margin-top: 5%;
+    }
+
+    .loft_types_title{
+        margin-top: 0;
+    }
+
+    .loft_card{
+        width: 200px;
+    }
+
+    .loft_card img{
+        width: 200px;
+        height: 220px;
+    }
+
+    .hover_div{
+        width: 200px;
+        height: 119px;
+    }
+
+    .hover_div h2{
+        margin-top: 32px;
+        font-size: 23px;
+    }
+
+    .hover_div p{
+        font-size: 11px;
+    }
+
+    .low_block{
+        height: 290px;
+    }
+
+    .carousel{
+        width: 230px;
+        height: 450px;
+    }
+
+    .top_carousel_img{
+        height: 280px;
+    }
+
+    .carousel-indicators{
+        display: none !important;
+    }
+
+    .adv_desc{
+        font-size: 16px;
+    }
+
+    .adv{
+        height: 430px;
+    }
+
+    .adv_top{
+        height: 376px;
+    }
+/* 
+    .adv_top{
+        height: 360px;
+    } */
+}
+
+@media all and (max-width: 426px){
+    .carousel{
+        height: 387px;
+    }
+
+    .main_block_loft{
+        margin-top: 32%;
+        flex-direction: column;
+        padding-bottom: 5%;
+    }
+
+    .left_loft{
+        width: 70%;
+        height: 275px;
+    }
+
+    .top_carousel_img{
+        margin: 45px auto;
+    }
+
+    .loft_card{
+        margin: 40px 10%;
+    }
+
+    .loft_types_title{
+        font-size: 20px;
+        height: 68px;
+        border-top: 3px solid #ff6700;
+        border-bottom: 3px solid #ff6700;
+    }
+
+    .loft_adv_title{
+        font-size: 20px;
+        height: 68px;
+        border-top: 3px solid #ff6700;
+        border-bottom: 3px solid #ff6700;
+        margin-top: 135%;
+    }
+
+    .loft_bg_low{
+        height: 900px;
+    }
+
+    .loft_caption{
+        display: block;
+    }
+
+    .adv{
+        height: 360px;
+    }
+
+    .adv_top{
+        height: 320px;
+    }
+
+    .adv_desc{
+        display: none;
+    }
+
+    .top_carousel_img{
+        height: 340px;
+    }
+
+    .carousel{
+        width: 280px;
+    }
+
+    .loft_caption{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+        height: 75px;
+        bottom: 15% !important;
+        font-size: 20px;
+        padding: 0 20px;
+        margin-right: -4%;
+    }
+
+    .loft_caption h3{
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+@media all and (max-width:376px){
+    .left_loft{
+        height: 260px;
+        font-size: 15px;
+    }
+
+    .loft_bg{
+        height: 780px;
+    }
+
+    .loft_adv_title{
+        margin-top: 155%;
+    }
+
+    .offcanvas-header{
+        margin-top: 75px !important;
+    }
+}

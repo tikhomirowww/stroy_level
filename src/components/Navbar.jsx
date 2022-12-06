@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -19,6 +19,10 @@ import { Link } from '@mui/material';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import { motion, useTime, useTransform } from 'framer-motion';
 import Logo from '../images/logo.png'
+import EmailIcon from '@mui/icons-material/Email';
+// import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 // const pages = ['Лофт', 'Душевые', 'Биокамины', 'Потолки'];
@@ -56,10 +60,20 @@ const pages = [
 
 function Navbar() {
     //framer
-//     const time = useTime();
-//   const rotate = useTransform(time, [0, 500], [0, 360], { clamp: false });
+  //   const time = useTime();
+  // const rotate = useTransform(time, [0, 500], [0, 360], { clamp: false });
 
-    const navigate = useNavigate()
+  // sidebar 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+
+
+
+  const navigate = useNavigate()
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -82,7 +96,7 @@ function Navbar() {
   return (
     // <motion.div style={{ rotate }}>
         <ThemeProvider theme={theme}>
-    <AppBar position="sticky">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -98,7 +112,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-                    <img onClick={() => navigate('/')} width="100" height="100" src={Logo} alt="error" />
+                    <img height="100" width="100" onClick={() => navigate('/')} src={Logo} alt="error" />
             
            
           </Typography>
@@ -109,12 +123,28 @@ function Navbar() {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={handleShow}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
-            <Menu
+            <Offcanvas  show={show} onHide={handleClose}>
+              <Offcanvas.Header closeButton style={{background: 'black', fill: 'white', width: '101%'}}>
+                <Offcanvas.Title style={{display: 'flex', width: '100%', justifyContent: 'space-between', color: 'white'}}> <div>Pages:</div><div><CloseIcon onClick={handleClose} style={{fill: 'white'}} /></div></Offcanvas.Title>
+              </Offcanvas.Header>
+              <div style={{height: '2px', borderTop: '2px #ff6700 solid', width: '101%'}}></div>
+              <Offcanvas.Body style={{background: 'black', width: '101%'}}>
+                <div className="pages_list">
+                  <ul>
+                    <li onClick={() => {navigate('/loft'); handleClose()}} className="page_item">Лофт</li>
+                    <li onClick={() => {navigate('/shower'); handleClose()}} className="page_item">Душевые</li>
+                    <li onClick={() => {navigate('/kaminy'); handleClose()}} className="page_item">Биокамины</li>
+                    <li onClick={() => {navigate('/potolki'); handleClose()}} className="page_item">Потолки</li>
+                  </ul>
+                </div>
+              </Offcanvas.Body>
+            </Offcanvas>
+            {/* <Menu
             className='menu-contain'
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -138,7 +168,7 @@ function Navbar() {
                   <Typography textAlign="center">{page.type}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
           <Typography
             variant="h5"
@@ -156,7 +186,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-                    <img width="100" height="100" src={Logo} alt="error" />
+                    <img className='navbar_logo'  width="100" height="100" src={Logo} alt="error" />
           </Typography>
           <Box className='menu-contain' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -184,14 +214,14 @@ function Navbar() {
                     </motion.div>
                 </Link>
                 <Link
-                href='https://www.facebook.com/stroylevel.kg'
+                href="mailto: stroylevel.kg@gmail.com"
                 >
                     <motion.div
                     animate={{ x: [50, 0] }}
                     whileHover={{rotate: 24}}
                     drag
                     >
-                    <FacebookOutlinedIcon className='social' style={{color: 'white'}}  />
+                    <EmailIcon className='social' style={{color: 'white'}}  />
                     </motion.div>
                 </Link>
             </div>
