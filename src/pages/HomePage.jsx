@@ -126,7 +126,7 @@ const HomePage = () => {
     const navigate = useNavigate();
 
     // const API = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSf5mD7e4ZGlBU4nfSObUR8YY0EyhoPir5AYprC2AKOP6foubw/formResponse'
-    const API = '#';
+    const API = '/submit';
 
     async function createOrder(newOrder){
         console.log(newOrder)
@@ -143,6 +143,10 @@ const HomePage = () => {
         newOrder.append("Имя", name);
         newOrder.append("Номер", number);
         newOrder.append("Изделие", type);
+        newOrder.append("subject", 'Запрос на замер!');
+        newOrder.append("template-contactform-botcheck", "");
+        newOrder.append("prefix", "template-contactform-");
+        newOrder.append("html_title", "Запрос на замер:");
         // let newOrder = {
         //     name,
         //     number
@@ -220,7 +224,7 @@ const HomePage = () => {
           <MenuItem value={'Потолок'}>Потолок</MenuItem>
         </Select>
       </FormControl>
-            <TextField sx={{color: 'red'}} onChange={(e) => setNumber(e.target.value)} value={number} name='entry.1599083215' id="standard-basic" size='small' label="Номер What's App" variant="outlined" />
+            <TextField sx={{color: 'red'}} onChange={(e) => setNumber(e.target.value)} value={number} name='entry.1599083215' id="standard-basic" size='small' type='tel' label="Номер What's App" variant="outlined" />
             <Button onClick={() => sendData(name, number, type)} className="modal_btn" >Отправить заявку</Button>
             </form>
             </ThemeProvider>
