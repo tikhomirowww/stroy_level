@@ -332,7 +332,7 @@ const HomePage = () => {
           <div className="icons_box">
               <div className="icon_container">
                 <div className="why_icon">
-                  <img width="100" height="100" src="http://cdn.onlinewebfonts.com/svg/img_515351.png" alt="error" />
+                  <img width="100" height="100" src="https://cdn.onlinewebfonts.com/svg/img_515351.png" alt="error" />
                 </div>
                 <h2>Международный опыт</h2>
               </div>
