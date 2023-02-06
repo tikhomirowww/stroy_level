@@ -1,6 +1,6 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
-import MainRoutes from './MainRoutes'
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import MainRoutes from "./MainRoutes";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
         <MainRoutes />
       </BrowserRouter>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
