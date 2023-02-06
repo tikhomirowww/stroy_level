@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "peerDependencies": {
-    "react-spring": "^8.x"
+    "react-spring": "^9.0.0-rc.3"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
